@@ -119,4 +119,5 @@ yachse = input("Gib die Y-Achse ein.")
 p10.pawnmove()
 p10.positioncall()
 
+input("Drücke eine beliebe Taste, um das Programm zu beenden.")
 
