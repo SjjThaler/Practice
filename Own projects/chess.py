@@ -25,7 +25,7 @@ class piece:
 			abc = "g"
 		if self.x == 8:
 			abc = "h"
-		print(abc + str(self.y))
+		print("Die Figur befindet sich auf:", abc + str(self.y))
 		
 
 
@@ -88,8 +88,6 @@ p24 = piece("R", 8, 8, 1)
 
 
 
-
-
 p18.x = 3
 p18.y = 6 
 
@@ -116,8 +114,11 @@ if xachse == "h":
 
 yachse = input("Gib die Y-Achse ein.")
 
+
 p10.pawnmove()
 p10.positioncall()
+
+
 
 input("Drücke eine beliebe Taste, um das Programm zu beenden.")
 
