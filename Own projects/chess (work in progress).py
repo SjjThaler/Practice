@@ -122,9 +122,9 @@ p10.positioncall()
 # Main loop variables
 turn = True
 
-# Main loop
+# Game loop
 while turn == true:
-	
+
 
 
 input("Drücke eine beliebe Taste, um das Programm zu beenden.")
