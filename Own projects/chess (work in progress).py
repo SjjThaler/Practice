@@ -1,4 +1,4 @@
-
+# Define parent class
 
 class piece:
 	def __init__(self, kind, x, y, color):
@@ -27,7 +27,7 @@ class piece:
 			abc = "h"
 		print("Die Figur befindet sich auf:", abc + str(self.y))
 		
-
+# Define inherited pawn child class
 
 class pawns(piece):
 
@@ -43,7 +43,7 @@ class pawns(piece):
 		self.y = self.y + 1
 
 
-	#White pawns
+# Instantiate white pawns
 p9 = pawns ("P", 1, 2, 0)
 p10 = pawns("P", 2, 2, 0)
 p11 = pawns("P", 3, 2, 0)
@@ -53,7 +53,7 @@ p14 = pawns("P", 6, 2, 0)
 p15 = pawns("P", 7, 2, 0)
 p16 = pawns("P", 8, 2, 0)
 
-#Black pawns
+# Instantiate black pawns
 p25 = pawns("P", 1, 7, 1)
 p26 = pawns("P", 2, 7, 1)
 p27 = pawns("P", 3, 7, 1)
@@ -118,6 +118,13 @@ yachse = input("Gib die Y-Achse ein.")
 p10.pawnmove()
 p10.positioncall()
 
+
+# Main loop variables
+turn = True
+
+# Main loop
+while turn == true:
+	
 
 
 input("Drücke eine beliebe Taste, um das Programm zu beenden.")
