@@ -95,26 +95,6 @@ p18.y = 6
 p18.positioncall()
 
 
-xachse = input("Gib die X-Achse ein.")
-if xachse == "a":
-	xachse = 1
-if xachse == "b":
-	xachse = 2
-if xachse == "c":
-	xachse = 3
-if xachse == "d":
-	xachse = 4
-if xachse == "e":
-	xachse = 5
-if xachse == "f":
-	xachse = 6
-if xachse == "g":
-	xachse = 7
-if xachse == "h":
-	xachse = 8
-
-yachse = input("Gib die Y-Achse ein.")
-
 
 # Defining piece check function
 
@@ -123,18 +103,31 @@ yachse = input("Gib die Y-Achse ein.")
 turn = True
 
 # Game loop
-while turn == true:
-	move = input
+while turn == True:
+	xachse = input("Gib die X-Achse ein.")
+	if xachse == "a":
+		xachse = 1
+	if xachse == "b":
+		xachse = 2
+	if xachse == "c":
+		xachse = 3
+	if xachse == "d":
+		xachse = 4
+	if xachse == "e":
+		xachse = 5
+	if xachse == "f":
+		xachse = 6
+	if xachse == "g":
+		xachse = 7
+	if xachse == "h":
+		xachse = 8
 
-	# Work in progress: need to research how to access instance values, i.e. how to check which piece
+	yachse = input("Gib die Y-Achse ein.")
+
+	# Work in progress: need to research how to access instance variables of class instances, i.e. how to check which piece
 	# is on a particular position
-	if move == "Check A7":
-		positioncall(piece == (x==1, y==2)
 
-	# Work in progress: need to figure out how to check which piece is on a particular position and
-	# how to move it
-	if move == ""
-	
+	print(getattr(self, xachse, yachse))
 
 
 input("Drücke eine beliebe Taste, um das Programm zu beenden.")
