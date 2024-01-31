@@ -9,6 +9,7 @@ class piece:
 
 	def positioncall(self):
 		abc = self.x
+
 		if self.x == 1:
 			abc = "a"
 		if self.x == 2:
@@ -115,8 +116,7 @@ if xachse == "h":
 yachse = input("Gib die Y-Achse ein.")
 
 
-p10.pawnmove()
-p10.positioncall()
+# Defining piece check function
 
 
 # Main loop variables
@@ -124,7 +124,17 @@ turn = True
 
 # Game loop
 while turn == true:
+	move = input
 
+	# Work in progress: need to research how to access instance values, i.e. how to check which piece
+	# is on a particular position
+	if move == "Check A7":
+		positioncall(piece == (x==1, y==2)
+
+	# Work in progress: need to figure out how to check which piece is on a particular position and
+	# how to move it
+	if move == ""
+	
 
 
 input("Drücke eine beliebe Taste, um das Programm zu beenden.")
