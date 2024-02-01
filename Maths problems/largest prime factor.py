@@ -2,7 +2,7 @@ x = 5
 pr = [2, 3, 5]
 err = []
 
-end = 10000
+end = 1000
 
 # First approximation
 while x < end:
@@ -29,7 +29,7 @@ for i in pr_flip:
 
 # Checking for largest prime factor of large
 
-large = 600851475143
+large = 1001
 pf = []
 
 for i in pr:
@@ -37,4 +37,6 @@ for i in pr:
 		pf.append(i)
 
 print(pf)
+
+
 
