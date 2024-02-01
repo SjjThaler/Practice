@@ -28,6 +28,13 @@ class piece:
 			abc = "h"
 		print("Die Figur befindet sich auf:", abc + str(self.y))
 		
+
+# Define an inherited class for comparing player input with individual pieces
+class gameclass(piece):
+	pass
+
+gameturn = gameclass("special", 0, 0, 0)
+
 # Define inherited pawn child class
 
 class pawns(piece):
@@ -89,13 +96,6 @@ p24 = piece("R", 8, 8, 1)
 
 
 
-p18.x = 3
-p18.y = 6 
-
-p18.positioncall()
-
-
-
 # Defining piece check function
 
 
@@ -124,10 +124,22 @@ while turn == True:
 
 	yachse = input("Gib die Y-Achse ein.")
 
-	# Work in progress: need to research how to access instance variables of class instances, i.e. how to check which piece
-	# is on a particular position
+	# Transferring values into gameturn instance for comparison with other pieces
+	gameturn.x = xachse
+	gameturn.y = yachse
 
-	print(getattr(self, xachse, yachse))
+
+	# Work in progress: don't know how to access a particular class instance even if it has the right values.
+	if getattr(piece, 'x', 'y') == getattr(gameturn, 'x', 'y'):
+		print(piece.kind)
+
+	
+
+
+
+	
+
+
 
 
 input("Drücke eine beliebe Taste, um das Programm zu beenden.")
