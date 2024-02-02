@@ -1,3 +1,7 @@
+# This is a small script for determining the largest
+# prime factor of a number. The prime number generator
+# is still very inefficient for now.
+
 x = 5
 pr = [2, 3, 5]
 err = []
@@ -36,7 +40,7 @@ for i in pr:
 	if large % i == 0:
 		pf.append(i)
 
-print(pf)
+print(pf[-1])
 
 
 
