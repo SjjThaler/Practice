@@ -1,146 +1,27 @@
-# Define parent class
+# Define a chess board class.
 
-class piece:
-	def __init__(self, kind, x, y, color):
-		self.kind = kind
-		self.x = x
-		self.y = y
-		self.color = color
-
-	def positioncall(self):
-		abc = self.x
-
-		if self.x == 1:
-			abc = "a"
-		if self.x == 2:
-			abc = "b"
-		if self.x == 3:
-			abc = "c"
-		if self.x == 4:
-			abc = "d"
-		if self.x == 5:
-			abc = "e"
-		if self.x == 6:
-			abc = "f"
-		if self.x == 7:
-			abc = "g"
-		if self.x == 8:
-			abc = "h"
-		print("Die Figur befindet sich auf:", abc + str(self.y))
-		
-
-# Define an inherited class for comparing player input with individual pieces
-class gameclass(piece):
-	pass
-
-gameturn = gameclass("special", 0, 0, 0)
-
-# Define inherited pawn child class
-
-class pawns(piece):
-
-	#def doppelsprung
-	#def pawnattack
-
-	def pawnmove(self):
-		self.x = xachse
-		self.y = int(yachse) 
-
-	def pawnattack(self):
-		self.x = self.x + 1
-		self.y = self.y + 1
-
-
-# Instantiate white pawns
-p9 = pawns ("P", 1, 2, 0)
-p10 = pawns("P", 2, 2, 0)
-p11 = pawns("P", 3, 2, 0)
-p12 = pawns("P", 4, 2, 0)
-p13 = pawns("P", 5, 2, 0)
-p14 = pawns("P", 6, 2, 0)
-p15 = pawns("P", 7, 2, 0)
-p16 = pawns("P", 8, 2, 0)
-
-# Instantiate black pawns
-p25 = pawns("P", 1, 7, 1)
-p26 = pawns("P", 2, 7, 1)
-p27 = pawns("P", 3, 7, 1)
-p28 = pawns("P", 4, 7, 1)
-p29 = pawns("P", 5, 7, 1)
-p30 = pawns("P", 6, 7, 1)
-p31 = pawns("P", 7, 7, 1)
-p32 = pawns("P", 8, 8, 1)
-
-
-#White pieces
-p1 = piece("R", 1, 1, 0)
-p2 = piece("N", 2, 1, 0)
-p3 = piece("B", 3, 1, 0)
-p4 = piece("Q", 4, 1, 0)
-p5 = piece("K", 5, 1, 0)
-p6 = piece("B", 6, 1, 0)
-p7 = piece("N", 7, 1, 0)
-p8 = piece("R", 8, 1, 0)
-
-
-
-#Black pieces
-p17 = piece("R", 1, 8, 1)
-p18 = piece("N", 2, 8, 1)
-p19 = piece("B", 3, 8, 1)
-p20 = piece("Q", 4, 8, 1)
-p21 = piece("K", 5, 8, 1)
-p22 = piece("B", 6, 8, 1)
-p23 = piece("N", 7, 8, 1)
-p24 = piece("R", 8, 8, 1)
-
-
-
-# Defining piece check function
-
-
-# Main loop variables
-turn = True
-
-# Game loop
-while turn == True:
-	xachse = input("Gib die X-Achse ein.")
-	if xachse == "a":
-		xachse = 1
-	if xachse == "b":
-		xachse = 2
-	if xachse == "c":
-		xachse = 3
-	if xachse == "d":
-		xachse = 4
-	if xachse == "e":
-		xachse = 5
-	if xachse == "f":
-		xachse = 6
-	if xachse == "g":
-		xachse = 7
-	if xachse == "h":
-		xachse = 8
-
-	yachse = input("Gib die Y-Achse ein.")
-
-	# Transferring values into gameturn instance for comparison with other pieces
-	gameturn.x = xachse
-	gameturn.y = yachse
-
-
-	# Work in progress: don't know how to access a particular class instance even if it has the right values.
-	if getattr(piece, 'x', 'y') == getattr(gameturn, 'x', 'y'):
-		print(piece.kind)
-
+class ChessBoard:
+    def __init__(self):
+        self.board = [
+            ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+            ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+            ['_', '_', '_', '_', '_', '_', '_', '_'],
+            ['_', '_', '_', '_', '_', '_', '_', '_'],
+            ['_', '_', '_', '_', '_', '_', '_', '_'],
+            ['_', '_', '_', '_', '_', '_', '_', '_'],
+            ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+            ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']
+        ]
 	
 
+    def display(self):
+    	for row in self.board:
+    		print(''.join(row))
 
+# Initialize chess board
 
-	
+chess_board = ChessBoard()
 
+# Call chess_board
 
-
-
-input("Drücke eine beliebe Taste, um das Programm zu beenden.")
-
+chess_board.display()
