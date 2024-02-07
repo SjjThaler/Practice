@@ -39,5 +39,6 @@ chess_board = ChessBoard()
 chess_board.display()
 
 chess_board.move_piece((1,0),(3,0))
+chess_board.move_piece((7,1),(5,2))
 
 chess_board.display()
