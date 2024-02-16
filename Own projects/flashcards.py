@@ -19,6 +19,10 @@ word = [(("Ich"),("我")),
 count = len(word)
 
 def next():
+	# Clear the screen
+	answer_label.config(text="")
+	my_entry.delete(0, END)
+
 	# Create random selection
 	global random_word
 	random_word = randint(0, count-1)
@@ -53,12 +57,6 @@ answer_button.grid(row=0, column=0, padx=20)
 next_button = Button(button_frame, text="Next", command=next)
 next_button.grid(row=0, column=1, padx=20)
 
-hint_button = Button(button_frame, text="Hint")
-hint_button.grid(row=0, column=2, padx=20)
-
-# Create Hint Label
-hint_label = Label(root, text="")
-hint_label.pack(pady=20)
 
 # Run next function when program starts
 next()
