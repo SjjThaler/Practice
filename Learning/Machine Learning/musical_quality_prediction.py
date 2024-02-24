@@ -4,8 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 # Sample data: musical chords and their corresponding qualities
-chords = np.array([(1, 3, 5, 7, 0), (1, 3, 5, 6.5, 0), (1, 2.5, 5, 0, 0), (1, 2.5, 4.5, 0, 0), (1, 3, 5, 7, 9), (1, 2.5, 0, 0, 0), (1, 1.5, 0, 0, 0), (1, 3, 0, 0, 0), (1, 0, 5, 0,0), (1, 0, 4, 0, 0), (1, 0, 6, 0, 0), (1, 0, 0, 7, 0)])
-qualities = np.array(["spheric", "dominant", "sad", "unstable", "colorful", "unstable", "unstable", "consonant", "consonant", "consonant", "consonant", "consonant"])
+# Each tuple represents: firstly the scale position + the intervals up to ninth chords
+# A dominant seventh chord on the fifth scale positionwould therefore be represented by (5, 1, 3, 5, 6.5) 
+chords = np.array([(0, 1, 3, 5, 7, 0), (5, 1, 3, 5, 6.5, 0), (0, 1, 2.5, 5, 0, 0), (0, 1, 2.5, 4.5, 0, 0), (0, 1, 3, 5, 7, 9), (0, 1, 2.5, 0, 0, 0), (0, 1, 1.5, 0, 0, 0), (0, 1, 3, 0, 0, 0), (0, 1, 0, 5, 0,0), (0, 1, 0, 4, 0, 0), (0, 1, 0, 6, 0, 0), (0, 1, 0, 0, 7, 0), (5, 1, 3, 5, 0, 0), (7, 1, 3, 4.5, 7, 0), (0, 1, 3, 6, 0, 0)])
+qualities = np.array(["spheric", "dominant", "sad", "unstable", "colorful", "unstable", "unstable", "consonant", "consonant", "consonant", "consonant", "consonant", "dominant", "dominant", "consonant"])
 
 # Splitting the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(chords, qualities, test_size=0.2, random_state=42)
