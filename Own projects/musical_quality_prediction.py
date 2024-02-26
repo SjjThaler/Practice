@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 # Sample data: musical chords and their corresponding qualities
 # Each tuple represents: firstly the scale position + the intervals up to ninth chords
 # A dominant seventh chord on the fifth scale position would therefore be represented by (5, 1, 3, 5, 6.5)
+# In classical theory but especially in jazz theory chords can have different functions / colours depending on which scale degree they are played on
 # Currently the accuracy of the model is very low because of a lack of training data 
 chords = np.array([(0, 1, 3, 5, 7, 0), (5, 1, 3, 5, 6.5, 0), (0, 1, 2.5, 5, 0, 0), (0, 1, 2.5, 4.5, 0, 0), (0, 1, 3, 5, 7, 9), (0, 1, 2.5, 0, 0, 0), (0, 1, 1.5, 0, 0, 0), (0, 1, 3, 0, 0, 0), (0, 1, 0, 5, 0,0), (0, 1, 0, 4, 0, 0), (0, 1, 0, 6, 0, 0), (0, 1, 0, 0, 7, 0), (5, 1, 3, 5, 0, 0), (7, 1, 3, 4.5, 7, 0), (0, 1, 3, 6, 0, 0)])
 qualities = np.array(["spheric", "dominant", "sad", "unstable", "colorful", "unstable", "unstable", "consonant", "consonant", "consonant", "consonant", "consonant", "dominant", "dominant", "consonant"])
