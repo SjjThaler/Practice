@@ -24,6 +24,6 @@ predictions = model.predict(X_test)
 # Printing the predictions
 print("Predictions:", predictions)
 
-# Can't use score to evaluate here as accuracy is more suitable for classification tasks
+# Evaluating the model by accuracy
 accuracy = model.score(X_test, y_test)
 print("Model Accuracy:", accuracy)
